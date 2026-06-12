@@ -2,7 +2,7 @@
 
 A Claude-powered agent that navigates a 2D grid maze: find the key, unlock the door, reach the goal.
 
-![demo](demo/demo.gif)
+![demo](llm-agent-world/demo/demo.gif)
 
 ---
 
