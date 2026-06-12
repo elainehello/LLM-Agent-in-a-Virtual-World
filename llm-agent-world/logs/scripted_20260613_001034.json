@@ -1,0 +1,668 @@
+{
+  "success": false,
+  "steps": 0,
+  "api_calls": 0,
+  "invalid_actions": 0,
+  "cells_explored": 50,
+  "mode": "scripted",
+  "log": [
+    {
+      "step": 0,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n? ? # # # # #\n? ? # . . . .\n? ? # . # # #\n? ? # . . . .\n? ? # . # # #\n\nCURRENT STATE\nPosition: (1, 1)\nInventory: nothing\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 25\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 50\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"move_right\", \"reasoning\": \"scripted\"}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        2,
+        1
+      ]
+    },
+    {
+      "step": 1,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n? # # # # # #\n? # . . . . .\n? # . # # # #\n? # . . . . .\n? # . # # # .\n\nCURRENT STATE\nPosition: (2, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 30\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 49\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"move_right\", \"reasoning\": \"scripted\"}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        3,
+        1
+      ]
+    },
+    {
+      "step": 2,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n# . . . . . .\n# . # # # # #\n# . . . . . .\n# . # # # . #\n\nCURRENT STATE\nPosition: (3, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 35\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 48\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"move_right\", \"reasoning\": \"scripted\"}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        4,
+        1
+      ]
+    },
+    {
+      "step": 3,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n. # # # # # #\n. . . . . . .\n. # # # . # #\n\nCURRENT STATE\nPosition: (4, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 40\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 47\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"pick_up\", \"reasoning\": \"scripted\"}",
+      "action": "pick_up",
+      "fallback": null,
+      "events": [
+        "nothing_to_pick_up"
+      ],
+      "outcome": "failed",
+      "position": [
+        4,
+        1
+      ]
+    },
+    {
+      "step": 4,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n. # # # # # #\n. . . . . . .\n. # # # . # #\n\nCURRENT STATE\nPosition: (4, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  pick_up\nOutcome: failed\nEvents:  nothing_to_pick_up\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 40\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 46\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"move_down\", \"reasoning\": \"scripted\"}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        4,
+        1
+      ]
+    },
+    {
+      "step": 5,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n. # # # # # #\n. . . . . . .\n. # # # . # #\n\nCURRENT STATE\nPosition: (4, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: failed\nEvents:  wall_collision\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 40\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 45\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"move_down\", \"reasoning\": \"scripted\"}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        4,
+        1
+      ]
+    },
+    {
+      "step": 6,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n. # # # # # #\n. . . . . . .\n. # # # . # #\n\nCURRENT STATE\nPosition: (4, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: failed\nEvents:  wall_collision\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 40\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 44\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"use_item\", \"reasoning\": \"scripted\"}",
+      "action": "use_item",
+      "fallback": null,
+      "events": [
+        "no_item_in_inventory"
+      ],
+      "outcome": "failed",
+      "position": [
+        4,
+        1
+      ]
+    },
+    {
+      "step": 7,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n. # # # # # #\n. . . . . . .\n. # # # . # #\n\nCURRENT STATE\nPosition: (4, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  use_item\nOutcome: failed\nEvents:  no_item_in_inventory\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 40\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 43\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"move_right\", \"reasoning\": \"scripted\"}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        5,
+        1
+      ]
+    },
+    {
+      "step": 8,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # #\n. . . . . . .\n# # # . # # #\n\nCURRENT STATE\nPosition: (5, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 45\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 42\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"move_right\", \"reasoning\": \"scripted\"}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 9,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 41\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 10,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 40\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 11,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 39\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 12,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 38\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 13,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 37\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 14,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 36\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 15,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 35\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 16,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 34\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 17,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 33\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 18,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 32\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 19,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 31\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 20,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 30\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 21,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 29\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 22,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 28\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 23,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 27\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 24,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 26\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 25,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 25\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 26,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 24\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 27,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 23\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 28,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 22\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 29,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 21\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 30,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 20\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 31,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 19\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 32,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 18\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 33,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 17\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 34,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 16\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 35,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 15\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 36,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 14\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 37,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 13\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 38,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 12\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 39,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 11\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 40,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 10\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 41,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 9\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 42,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 8\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 43,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 7\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 44,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 6\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 45,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 5\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 46,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 4\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 47,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 3\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 48,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 2\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 49,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ?\n? ? ? ? ? ? ?\n# # # # # # #\n. . . . . . .\n# # # # # # .\n. . . . . . .\n# # . # # # .\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  wait\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   not yet discovered\n- Door location:  not yet discovered\n- Explored cells: 50\n- Inventory:      nothing\n\n\nMISSION STATUS\nSteps remaining: 1\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 use when planning next move\n\nRespond ONLY with valid JSON: {\"action\":\"<action>\",\"reasoning\":\"<why>\"}",
+      "raw_llm": "{\"action\": \"wait\", \"reasoning\": \"scripted\"}",
+      "action": "wait",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    }
+  ]
+}

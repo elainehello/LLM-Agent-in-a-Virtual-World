@@ -8,20 +8,22 @@ load_dotenv()
 
 MEDIUM = [
     "###########",
-    "#A . . . .#",
-    "#. # # # .#",
-    "#. . K . .#",
-    "#. # # # .#",
-    "#. . . D .#",
-    "#. # # # .#",
-    "#. . . . G#",
+    "#A........#",
+    "#.#######.#",
+    "#.........#",
+    "#.###.###.#",
+    "#....K....#",
+    "#.###.###.#",
+    "#...D.....#",
+    "#.###.###.#",
+    "#.......G.#",
     "###########",
 ]
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", choices=["llm","scripted"], default="scripted")
-    args   = parser.parse_args()
+    args = parser.parse_args()
 
     grid = Grid(MEDIUM)
 

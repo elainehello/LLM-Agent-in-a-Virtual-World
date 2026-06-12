@@ -1,4 +1,3 @@
-from typing import Any
 from dataclasses import dataclass
 
 UNSEEN = "?"
@@ -82,6 +81,7 @@ class Grid:
                 if agent.has_key:
                     self.set_cell(next_pos, ".")
                     agent.pos = next_pos
+                    agent.has_key = False
                     return ActionResult(action=action, outcome="success",
                                         events=["door_unlocked"])
                 else:

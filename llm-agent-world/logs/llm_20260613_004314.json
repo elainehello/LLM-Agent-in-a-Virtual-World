@@ -1,0 +1,692 @@
+{
+  "success": false,
+  "steps": 0,
+  "api_calls": 50,
+  "invalid_actions": 0,
+  "cells_explored": 121,
+  "mode": "llm",
+  "log": [
+    {
+      "step": 0,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n? ? ? # # # # # #\n? ? ? # . . . . .\n? ? ? # . # # # #\n? ? ? # . . . . .\n? ? ? # . # # # .\n? ? ? # . . . . K\n\nCURRENT STATE\nPosition: (1, 1)\nInventory: nothing\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  not yet discovered\n- Explored cells: 36\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nYou are on row 1 at x=1. Row 2 is a wall except at x=1 and x=9. Move RIGHT to reach x=9 (the south corridor), then move down.\n\nMISSION STATUS\nSteps remaining: 50\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Move right toward x=9 to reach the south corridor that bypasses the wall barrier at row 2.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        2,
+        1
+      ]
+    },
+    {
+      "step": 1,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n? ? # # # # # # #\n? ? # . . . . . .\n? ? # . # # # # #\n? ? # . . . . . .\n? ? # . # # # . #\n? ? # . . . . K .\n\nCURRENT STATE\nPosition: (2, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  not yet discovered\n- Explored cells: 42\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nYou are on row 1 at x=2. Row 2 is a wall except at x=1 and x=9. Move RIGHT to reach x=9 (the south corridor), then move down.\n\nMISSION STATUS\nSteps remaining: 49\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Move right from x=2 toward x=9 to reach the south corridor and access the key at (5,5).\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        3,
+        1
+      ]
+    },
+    {
+      "step": 2,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n? # # # # # # # #\n? # . . . . . . .\n? # . # # # # # #\n? # . . . . . . .\n? # . # # # . # #\n? # . . . . K . .\n\nCURRENT STATE\nPosition: (3, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  not yet discovered\n- Explored cells: 48\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nYou are on row 1 at x=3. Row 2 is a wall except at x=1 and x=9. Move RIGHT to reach x=9 (the south corridor), then move down.\n\nMISSION STATUS\nSteps remaining: 48\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Continue moving right toward x=9 to reach the south corridor that bypasses the wall barrier at row 2.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        4,
+        1
+      ]
+    },
+    {
+      "step": 3,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n# # # # # # # # #\n# . . . . . . . .\n# . # # # # # # #\n# . . . . . . . .\n# . # # # . # # #\n# . . . . K . . .\n\nCURRENT STATE\nPosition: (4, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  not yet discovered\n- Explored cells: 54\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nYou are on row 1 at x=4. Row 2 is a wall except at x=1 and x=9. Move RIGHT to reach x=9 (the south corridor), then move down.\n\nMISSION STATUS\nSteps remaining: 47\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Continue moving right to reach x=9, the open passage south through the wall at row 2.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        5,
+        1
+      ]
+    },
+    {
+      "step": 4,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n# # # # # # # # #\n. . . . . . . . .\n. # # # # # # # .\n. . . . . . . . .\n. # # # . # # # .\n. . . . K . . . .\n\nCURRENT STATE\nPosition: (5, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  not yet discovered\n- Explored cells: 60\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nYou are on row 1 at x=5. Row 2 is a wall except at x=1 and x=9. Move RIGHT to reach x=9 (the south corridor), then move down.\n\nMISSION STATUS\nSteps remaining: 46\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Continue moving right toward x=9 to reach the south corridor that bypasses the wall at row 2.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        1
+      ]
+    },
+    {
+      "step": 5,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n# # # # # # # # #\n. . . . . . . . #\n# # # # # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . K . . . . #\n\nCURRENT STATE\nPosition: (6, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  not yet discovered\n- Explored cells: 66\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nYou are on row 1 at x=6. Row 2 is a wall except at x=1 and x=9. Move RIGHT to reach x=9 (the south corridor), then move down.\n\nMISSION STATUS\nSteps remaining: 45\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Continue right toward x=9 to reach the south corridor that bypasses row 2's wall.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        7,
+        1
+      ]
+    },
+    {
+      "step": 6,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n# # # # # # # # ?\n. . . . . . . # ?\n# # # # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . K . . . . # ?\n\nCURRENT STATE\nPosition: (7, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  not yet discovered\n- Explored cells: 66\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nYou are on row 1 at x=7. Row 2 is a wall except at x=1 and x=9. Move RIGHT to reach x=9 (the south corridor), then move down.\n\nMISSION STATUS\nSteps remaining: 44\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Continue moving right toward x=9 to find the south corridor past the wall at row 2.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        8,
+        1
+      ]
+    },
+    {
+      "step": 7,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n# # # # # # # ? ?\n. . . . . . # ? ?\n# # # # # . # ? ?\n. . . . . . # ? ?\n# . # # # . # ? ?\n. K . . . . # ? ?\n\nCURRENT STATE\nPosition: (8, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  not yet discovered\n- Explored cells: 66\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nYou are on row 1 at x=8. Row 2 is a wall except at x=1 and x=9. Move RIGHT to reach x=9 (the south corridor), then move down.\n\nMISSION STATUS\nSteps remaining: 43\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Move right to x=9, the open passage south past the wall barrier at row 2.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        9,
+        1
+      ]
+    },
+    {
+      "step": 8,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n# # # # # # ? ? ?\n. . . . . # ? ? ?\n# # # # . # ? ? ?\n. . . . . # ? ? ?\n. # # # . # ? ? ?\nK . . . . # ? ? ?\n\nCURRENT STATE\nPosition: (9, 1)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  not yet discovered\n- Explored cells: 66\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nYou are at x=9. Move DOWN \u2014 this is the open south corridor.\n\nMISSION STATUS\nSteps remaining: 42\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"At x=9 which is an open south corridor; moving down to explore and eventually reach the key at (5,5).\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        9,
+        2
+      ]
+    },
+    {
+      "step": 9,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n# # # # # # ? ? ?\n. . . . . # ? ? ?\n# # # # . # ? ? ?\n. . . . . # ? ? ?\n. # # # . # ? ? ?\nK . . . . # ? ? ?\n. # # # . # ? ? ?\n\nCURRENT STATE\nPosition: (9, 2)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  not yet discovered\n- Explored cells: 72\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nKey is at (5,5). Navigate there and use pick_up.\n\nMISSION STATUS\nSteps remaining: 41\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_left\",\n  \"reasoning\": \"Move west from (9,2) toward the key at (5,5); need to reach x=5 first, then navigate south.\"\n}",
+      "action": "move_left",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        9,
+        2
+      ]
+    },
+    {
+      "step": 10,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n? ? ? ? ? ? ? ? ?\n# # # # # # ? ? ?\n. . . . . # ? ? ?\n# # # # . # ? ? ?\n. . . . . # ? ? ?\n. # # # . # ? ? ?\nK . . . . # ? ? ?\n. # # # . # ? ? ?\n\nCURRENT STATE\nPosition: (9, 2)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_left\nOutcome: failed\nEvents:  wall_collision\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  not yet discovered\n- Explored cells: 72\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nKey is at (5,5). Navigate there and use pick_up.\n\nMISSION STATUS\nSteps remaining: 40\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"At (9, 2) which is a known open passage, move south toward the key at (5, 5).\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        9,
+        3
+      ]
+    },
+    {
+      "step": 11,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n# # # # # # ? ? ?\n. . . . . # ? ? ?\n# # # # . # ? ? ?\n. . . . . # ? ? ?\n. # # # . # ? ? ?\nK . . . . # ? ? ?\n. # # # . # ? ? ?\n. . . . . # ? ? ?\n\nCURRENT STATE\nPosition: (9, 3)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  not yet discovered\n- Explored cells: 78\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nKey is at (5,5). Navigate there and use pick_up.\n\nMISSION STATUS\nSteps remaining: 39\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_left\",\n  \"reasoning\": \"At (9,3), need to reach key at (5,5) by moving left toward x=5, then down to y=5.\"\n}",
+      "action": "move_left",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        8,
+        3
+      ]
+    },
+    {
+      "step": 12,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n# # # # # # # ? ?\n. . . . . . # ? ?\n# # # # # . # ? ?\n. . . . . . # ? ?\n# . # # # . # ? ?\n. K . . . . # ? ?\n# . # # # . # ? ?\nD . . . . . # ? ?\n\nCURRENT STATE\nPosition: (8, 3)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_left\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  (4, 7)\n- Explored cells: 80\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nKey is at (5,5). Navigate there and use pick_up.\n\nMISSION STATUS\nSteps remaining: 38\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"Currently at (8,3), need to reach key at (5,5); moving down to get closer to row 5.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        8,
+        3
+      ]
+    },
+    {
+      "step": 13,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n# # # # # # # ? ?\n. . . . . . # ? ?\n# # # # # . # ? ?\n. . . . . . # ? ?\n# . # # # . # ? ?\n. K . . . . # ? ?\n# . # # # . # ? ?\nD . . . . . # ? ?\n\nCURRENT STATE\nPosition: (8, 3)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: failed\nEvents:  wall_collision\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  (4, 7)\n- Explored cells: 80\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nKey is at (5,5). Navigate there and use pick_up.\n\nMISSION STATUS\nSteps remaining: 37\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_left\",\n  \"reasoning\": \"Blocked south by wall at (8,4); moving left toward x=1 to find open passage south per navigation rules.\"\n}",
+      "action": "move_left",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        7,
+        3
+      ]
+    },
+    {
+      "step": 14,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n# # # # # # # # ?\n. . . . . . . # ?\n# # # # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . K . . . . # ?\n# # . # # # . # ?\n. D . . . . . # ?\n\nCURRENT STATE\nPosition: (7, 3)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_left\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  (4, 7)\n- Explored cells: 82\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nKey is at (5,5). Navigate there and use pick_up.\n\nMISSION STATUS\nSteps remaining: 36\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_left\",\n  \"reasoning\": \"Continue moving west toward the key at (5,5) from current position (7,3).\"\n}",
+      "action": "move_left",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        3
+      ]
+    },
+    {
+      "step": 15,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n# # # # # # # # #\n. . . . . . . . #\n# # # # # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . K . . . . #\n# # # . # # # . #\n. . D . . . . . #\n\nCURRENT STATE\nPosition: (6, 3)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_left\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  (4, 7)\n- Explored cells: 84\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nKey is at (5,5). Navigate there and use pick_up.\n\nMISSION STATUS\nSteps remaining: 35\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"Moving south from (6,3) toward the key at (5,5); row 4 appears passable at x=6.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        6,
+        3
+      ]
+    },
+    {
+      "step": 16,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n# # # # # # # # #\n. . . . . . . . #\n# # # # # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . K . . . . #\n# # # . # # # . #\n. . D . . . . . #\n\nCURRENT STATE\nPosition: (6, 3)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: failed\nEvents:  wall_collision\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  (4, 7)\n- Explored cells: 84\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nKey is at (5,5). Navigate there and use pick_up.\n\nMISSION STATUS\nSteps remaining: 34\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_left\",\n  \"reasoning\": \"Move left from (6,3) toward x=1 to find a passage south around the wall barrier at row 2.\"\n}",
+      "action": "move_left",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        5,
+        3
+      ]
+    },
+    {
+      "step": 17,
+      "observation": "LOCAL VIEW (? = unseen)\n? ? ? ? ? ? ? ? ?\n# # # # # # # # #\n. . . . . . . . .\n. # # # # # # # .\n. . . . . . . . .\n. # # # . # # # .\n. . . . K . . . .\n. # # # . # # # .\n. . . D . . . . .\n\nCURRENT STATE\nPosition: (5, 3)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_left\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  (4, 7)\n- Explored cells: 86\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nKey is at (5,5). Navigate there and use pick_up.\n\nMISSION STATUS\nSteps remaining: 33\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"Key is at (5,5) and I'm at (5,3), so move down two rows to reach it.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        5,
+        4
+      ]
+    },
+    {
+      "step": 18,
+      "observation": "LOCAL VIEW (? = unseen)\n# # # # # # # # #\n. . . . . . . . .\n. # # # # # # # .\n. . . . . . . . .\n. # # # . # # # .\n. . . . K . . . .\n. # # # . # # # .\n. . . D . . . . .\n. # # # . # # # .\n\nCURRENT STATE\nPosition: (5, 4)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  (4, 7)\n- Explored cells: 95\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nKey is at (5,5). Navigate there and use pick_up.\n\nMISSION STATUS\nSteps remaining: 32\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"Key is directly below at (5,5), so move down one cell to reach it.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [
+        "found_key"
+      ],
+      "outcome": "success",
+      "position": [
+        5,
+        5
+      ]
+    },
+    {
+      "step": 19,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . . .\n. # # # # # # # .\n. . . . . . . . .\n. # # # . # # # .\n. . . . K . . . .\n. # # # . # # # .\n. . . D . . . . .\n. # # # . # # # .\n. . . . . . . G .\n\nCURRENT STATE\nPosition: (5, 5)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: success\nEvents:  found_key\n\nKNOWN WORLD STATE\n- Key location:   (5, 5)\n- Door location:  (4, 7)\n- Explored cells: 104\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nKey is at (5,5). Navigate there and use pick_up.\n\nMISSION STATUS\nSteps remaining: 31\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"pick_up\",\n  \"reasoning\": \"I'm at (5,5) where the key is located, so I'll pick it up immediately.\"\n}",
+      "action": "pick_up",
+      "fallback": null,
+      "events": [
+        "picked_up_key"
+      ],
+      "outcome": "success",
+      "position": [
+        5,
+        5
+      ]
+    },
+    {
+      "step": 20,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . . .\n. # # # # # # # .\n. . . . . . . . .\n. # # # . # # # .\n. . . . . . . . .\n. # # # . # # # .\n. . . D . . . . .\n. # # # . # # # .\n. . . . . . . G .\n\nCURRENT STATE\nPosition: (5, 5)\nInventory: key\n\nLAST ACTION RESULT\nAction:  pick_up\nOutcome: success\nEvents:  picked_up_key\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  (4, 7)\n- Explored cells: 104\n- Inventory:      key\n\n\nNAVIGATION HINT\nYou have the key. Door is at (4,7). Walk INTO it (move onto that cell) to unlock.\n\nMISSION STATUS\nSteps remaining: 30\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"I have the key and need to reach the door at (4,7); moving down from (5,5) gets me closer to row 7.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        5,
+        6
+      ]
+    },
+    {
+      "step": 21,
+      "observation": "LOCAL VIEW (? = unseen)\n. # # # # # # # .\n. . . . . . . . .\n. # # # . # # # .\n. . . . . . . . .\n. # # # . # # # .\n. . . D . . . . .\n. # # # . # # # .\n. . . . . . . G .\n# # # # # # # # #\n\nCURRENT STATE\nPosition: (5, 6)\nInventory: key\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  (4, 7)\n- Explored cells: 113\n- Inventory:      key\n\n\nNAVIGATION HINT\nYou have the key. Door is at (4,7). Walk INTO it (move onto that cell) to unlock.\n\nMISSION STATUS\nSteps remaining: 29\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_left\",\n  \"reasoning\": \"Move from (5,6) to (4,6) to get directly above the door at (4,7), then move down to unlock it.\"\n}",
+      "action": "move_left",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        5,
+        6
+      ]
+    },
+    {
+      "step": 22,
+      "observation": "LOCAL VIEW (? = unseen)\n. # # # # # # # .\n. . . . . . . . .\n. # # # . # # # .\n. . . . . . . . .\n. # # # . # # # .\n. . . D . . . . .\n. # # # . # # # .\n. . . . . . . G .\n# # # # # # # # #\n\nCURRENT STATE\nPosition: (5, 6)\nInventory: key\n\nLAST ACTION RESULT\nAction:  move_left\nOutcome: failed\nEvents:  wall_collision\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  (4, 7)\n- Explored cells: 113\n- Inventory:      key\n\n\nNAVIGATION HINT\nYou have the key. Door is at (4,7). Walk INTO it (move onto that cell) to unlock.\n\nMISSION STATUS\nSteps remaining: 28\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"I'm at (5,6) with the key and need to reach the door at (4,7); moving down gets me closer to the door's row.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        5,
+        7
+      ]
+    },
+    {
+      "step": 23,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . . .\n. # # # . # # # .\n. . . . . . . . .\n. # # # . # # # .\n. . . D . . . . .\n. # # # . # # # .\n. . . . . . . G .\n# # # # # # # # #\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (5, 7)\nInventory: key\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  (4, 7)\n- Explored cells: 113\n- Inventory:      key\n\n\nNAVIGATION HINT\nYou have the key. Door is at (4,7). Walk INTO it (move onto that cell) to unlock.\n\nMISSION STATUS\nSteps remaining: 27\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_left\",\n  \"reasoning\": \"Door is at (4,7) and I'm at (5,7), so move left to reach and unlock it with the key I'm holding.\"\n}",
+      "action": "move_left",
+      "fallback": null,
+      "events": [
+        "door_unlocked"
+      ],
+      "outcome": "success",
+      "position": [
+        4,
+        7
+      ]
+    },
+    {
+      "step": 24,
+      "observation": "LOCAL VIEW (? = unseen)\n# . . . . . . . .\n# . # # # . # # #\n# . . . . . . . .\n# . # # # . # # #\n# . . . . . . . .\n# . # # # . # # #\n# . . . . . . . G\n# # # # # # # # #\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (4, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_left\nOutcome: success\nEvents:  door_unlocked\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 118\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 26\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Goal G is at (8,9) and I'm at (4,7), so I need to move right and down to reach it.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        5,
+        7
+      ]
+    },
+    {
+      "step": 25,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . . .\n. # # # . # # # .\n. . . . . . . . .\n. # # # . # # # .\n. . . . . . . . .\n. # # # . # # # .\n. . . . . . . G .\n# # # # # # # # #\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (5, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 118\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 25\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Goal G is at (8,9) and I'm at (5,7), so I need to move right to x=8 then down to y=9.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        7
+      ]
+    },
+    {
+      "step": 26,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . G . #\n# # # # # # # # #\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (6, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 24\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Goal G is at (8,9) and I'm at (6,7); move right toward x=8, then down to reach the goal.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 27,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 23\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"Goal G is at (8,9) and I'm at (7,7), so I need to move south 2 cells to reach it.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 28,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: failed\nEvents:  wall_collision\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 22\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_left\",\n  \"reasoning\": \"Goal G is at (8,9) but I'm at (7,7) blocked by walls below; need to move left to x=1 to access the south passage as per navigation rules.\"\n}",
+      "action": "move_left",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        7
+      ]
+    },
+    {
+      "step": 29,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . G . #\n# # # # # # # # #\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (6, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_left\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 21\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Goal G is at (8,9) and I'm at (6,7); move right toward x=8, then down to reach the goal.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 30,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 20\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"Goal G is at (8,9) and I'm at (7,7), so I need to move down 2 rows to reach it.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 31,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: failed\nEvents:  wall_collision\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 19\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_left\",\n  \"reasoning\": \"Move left toward x=1 to reach a passage south since move_down failed from current position.\"\n}",
+      "action": "move_left",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        7
+      ]
+    },
+    {
+      "step": 32,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . G . #\n# # # # # # # # #\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (6, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_left\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 18\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Goal G is at (8,9) and I'm at (6,7); move right to reach x=8, then move down to reach the goal.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 33,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 17\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"Goal G is at (8,9) and I'm at (7,7), so I need to move down 2 rows to reach it.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 34,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: failed\nEvents:  wall_collision\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 16\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_left\",\n  \"reasoning\": \"Goal G is at (8,9) but I'm blocked at (7,7); need to move left to x=1 first to access the south passage past row 2.\"\n}",
+      "action": "move_left",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        7
+      ]
+    },
+    {
+      "step": 35,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . G . #\n# # # # # # # # #\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (6, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_left\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 15\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Goal is at (8,9), I'm at (6,7), so move right toward x=8 then down to reach it.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 36,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 14\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"Goal G is at (8,9) and I'm at (7,7), so I need to move down 2 rows to reach it.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 37,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: failed\nEvents:  wall_collision\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 13\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_left\",\n  \"reasoning\": \"Move left toward x=1 to navigate around the wall barrier, then go south to reach goal G at (8,9).\"\n}",
+      "action": "move_left",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        7
+      ]
+    },
+    {
+      "step": 38,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . G . #\n# # # # # # # # #\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (6, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_left\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 12\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Goal is at (8,9) and I'm at (6,7), so move right to x=8 then down to reach it.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 39,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 11\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"Goal G is at (8,9), I'm at (7,7), so I need to move down 2 cells to reach it.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 40,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: failed\nEvents:  wall_collision\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 10\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Goal G is at (8,9) and I'm at (7,7); moving right toward x=8, then I'll move down via the x=9 passage since row y=7 has walls blocking direct southward movement.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        8,
+        7
+      ]
+    },
+    {
+      "step": 41,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . # ? ?\n# . # # # . # ? ?\n. . . . . . # ? ?\n# . # # # . # ? ?\n. . . . . . # ? ?\n# . # # # . # ? ?\n. . . . G . # ? ?\n# # # # # # # ? ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (8, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 9\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"Goal G is at (8,9), I'm at (8,7), so move down 2 rows to reach it.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        8,
+        7
+      ]
+    },
+    {
+      "step": 42,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . # ? ?\n# . # # # . # ? ?\n. . . . . . # ? ?\n# . # # # . # ? ?\n. . . . . . # ? ?\n# . # # # . # ? ?\n. . . . G . # ? ?\n# # # # # # # ? ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (8, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: failed\nEvents:  wall_collision\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 8\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_left\",\n  \"reasoning\": \"I'm at (8,7) and need to reach goal G at (8,9), but move_down failed; I'll move left toward x=1 to access a south passage per the navigation rules.\"\n}",
+      "action": "move_left",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 43,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_left\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 7\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"Goal G is at (8,9) which is directly south; I'm at (7,7) so moving down twice will reach it.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 44,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: failed\nEvents:  wall_collision\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 6\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_left\",\n  \"reasoning\": \"I'm at (7,7) and need to reach goal G at (8,9); moving left toward x=1 to find a southern passage since move_down failed.\"\n}",
+      "action": "move_left",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        7
+      ]
+    },
+    {
+      "step": 45,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . G . #\n# # # # # # # # #\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (6, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_left\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 5\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Goal G is at (8,9) and I'm at (6,7); moving right gets me closer to x=8, then I'll move down to reach the goal.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 46,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 4\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"Goal G is at (8,9), I'm at (7,7), so move down to row 8 then navigate to goal.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 47,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_down\nOutcome: failed\nEvents:  wall_collision\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 3\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_left\",\n  \"reasoning\": \"Move left from (7,7) toward x=1 to find a passage south since row y=7 is walled at current position; goal is at (8,9) so need to navigate around walls.\"\n}",
+      "action": "move_left",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        6,
+        7
+      ]
+    },
+    {
+      "step": 48,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . . . #\n# # # . # # # . #\n. . . . . . G . #\n# # # # # # # # #\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (6, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_left\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 2\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_right\",\n  \"reasoning\": \"Goal G is at (8,9) and I'm at (6,7), so move right twice then down once to reach it.\"\n}",
+      "action": "move_right",
+      "fallback": null,
+      "events": [],
+      "outcome": "success",
+      "position": [
+        7,
+        7
+      ]
+    },
+    {
+      "step": 49,
+      "observation": "LOCAL VIEW (? = unseen)\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . . . # ?\n# # . # # # . # ?\n. . . . . G . # ?\n# # # # # # # # ?\n? ? ? ? ? ? ? ? ?\n\nCURRENT STATE\nPosition: (7, 7)\nInventory: nothing\n\nLAST ACTION RESULT\nAction:  move_right\nOutcome: success\n\nKNOWN WORLD STATE\n- Key location:   already collected\n- Door location:  unlocked\n- Explored cells: 121\n- Inventory:      nothing\n\n\nNAVIGATION HINT\nDoor is unlocked. Goal G is at (8,9). Move onto that cell to win.\n\nMISSION STATUS\nSteps remaining: 1\n\nAVAILABLE ACTIONS\n  move_up: Move north one cell\n  move_down: Move south one cell\n  move_left: Move west one cell\n  move_right: Move east one cell\n  pick_up: Pick up object at current position\n  use_item: Use held item on adjacent interactable\n  wait: Stay in place \u2014 ONLY use if completely blocked with no valid moves\n\nRespond ONLY with raw JSON: {\"action\":\"<action>\",\"reasoning\":\"<one short sentence>\"}",
+      "raw_llm": "{\n  \"action\": \"move_down\",\n  \"reasoning\": \"Goal G is at (8,9) and I'm at (7,7), so move down one cell to reach it.\"\n}",
+      "action": "move_down",
+      "fallback": null,
+      "events": [
+        "wall_collision"
+      ],
+      "outcome": "failed",
+      "position": [
+        7,
+        7
+      ]
+    }
+  ]
+}

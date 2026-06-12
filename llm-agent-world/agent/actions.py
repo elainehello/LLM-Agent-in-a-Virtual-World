@@ -1,6 +1,6 @@
 import json
 from dataclasses import dataclass, field
-from typing import Literal, Any
+from typing import Literal
 
 ActionName = Literal[
     "move_up","move_down","move_left","move_right",
@@ -14,7 +14,7 @@ ACTION_DESCRIPTIONS = {
     "move_right": "Move east one cell",
     "pick_up":    "Pick up object at current position",
     "use_item":   "Use held item on adjacent interactable",
-    "wait":       "Stay in place — use when planning next move",
+    "wait":       "Stay in place — ONLY use if completely blocked with no valid moves",
 }
 
 FALLBACK = "wait"
@@ -50,15 +50,4 @@ def validate(llm_output: str, world, agent) -> tuple[str, str | None]:
     if action not in ACTION_DESCRIPTIONS:
         return FALLBACK, "unknown_action"
 
-    if action.startswith("move_"):
-        direction = action.split("_")[1]
-        next_pos: tuple[Any, Any] = _next_pos(agent.pos, direction)
-        if world.is_wall(next_pos):
-            return FALLBACK, "wall_collision"
-
     return action, None
-
-
-def _next_pos(pos: tuple[Any, Any], direction: str) -> tuple:
-    x, y = pos
-    return {"up":(x,y-1),"down":(x,y+1),"left":(x-1,y),"right":(x+1,y)}[direction]

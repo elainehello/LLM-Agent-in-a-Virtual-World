@@ -1,24 +1,29 @@
 import json, datetime, pathlib
 from typing import Any
-from world.grid    import Grid
+from world.grid        import Grid
 from agent.observer    import build_observation
 from agent.world_model import WorldModel
 from agent.actions     import validate, ActionResult
 
 SCRIPTED = [
-    "move_right","move_right","move_right",
+    "move_right","move_right","move_right","move_right",
+    "move_right","move_right","move_right","move_right",
+    "move_down","move_down","move_down","move_down",
+    "move_left","move_left","move_left","move_left",
     "pick_up",
     "move_down","move_down",
-    "use_item",
-    "move_right","move_right",
+    "move_left",        # walks into door → unlocks automatically
+    "move_right",
+    "move_down","move_down",
+    "move_right","move_right","move_right",
 ]
 
 def run(grid: Grid, llm=None, max_steps=50, mode="llm") -> dict[str, Any]:
-    agent      = grid.spawn_agent()
-    memory     = WorldModel()
-    log        = []
-    metrics    = {"success":False,"steps":0,"api_calls":0,
-                  "invalid_actions":0,"cells_explored":0}
+    agent       = grid.spawn_agent()
+    memory      = WorldModel()
+    log         = []
+    metrics     = {"success":False,"steps":0,"api_calls":0,
+                   "invalid_actions":0,"cells_explored":0}
     last_result = None
     script_idx  = 0
 
@@ -34,6 +39,16 @@ def run(grid: Grid, llm=None, max_steps=50, mode="llm") -> dict[str, Any]:
             raw    = llm.call(obs)
             metrics["api_calls"] += 1
             action_name, error = validate(raw, grid, agent)
+
+            # Debugging: when validation fails or when waiting around critical steps,
+            # print the full observation and raw LLM output to help diagnose stalls.
+            if error or (action_name == "wait" and 4 <= step <= 7):
+                print("=" * 40)
+                print("OBSERVATION:")
+                print(obs)
+                print("RAW_LLM_OUTPUT:")
+                print(raw)
+                print("=" * 40)
 
         if error:
             metrics["invalid_actions"] += 1
