@@ -23,6 +23,7 @@ MEDIUM = [
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", choices=["llm","scripted"], default="scripted")
+    parser.add_argument("--render", action="store_true", help="Open a Pygame window")
     args = parser.parse_args()
 
     grid = Grid(MEDIUM)
@@ -33,7 +34,7 @@ if __name__ == "__main__":
     else:
         llm = None
 
-    result = run(grid, llm=llm, max_steps=50, mode=args.mode)
+    result = run(grid, llm=llm, max_steps=50, mode=args.mode, render=args.render)
     print(f"\n{'SUCCESS' if result['success'] else 'FAILED'} — "
           f"{result['steps']} steps | "
           f"{result['cells_explored']} cells explored | "

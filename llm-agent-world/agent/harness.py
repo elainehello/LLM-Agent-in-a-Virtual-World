@@ -18,7 +18,7 @@ SCRIPTED = [
     "move_right","move_right","move_right",
 ]
 
-def run(grid: Grid, llm=None, max_steps=50, mode="llm") -> dict[str, Any]:
+def run(grid: Grid, llm=None, max_steps=50, mode="llm", render=False) -> dict[str, Any]:
     agent       = grid.spawn_agent()
     memory      = WorldModel()
     log         = []
@@ -26,6 +26,11 @@ def run(grid: Grid, llm=None, max_steps=50, mode="llm") -> dict[str, Any]:
                    "invalid_actions":0,"cells_explored":0}
     last_result = None
     script_idx  = 0
+
+    renderer = None
+    if render:
+        from world.renderer import Renderer
+        renderer = Renderer(grid.rows, grid.cols)
 
     for step in range(max_steps):
         obs = build_observation(grid, agent, memory, last_result, max_steps, step)
@@ -71,10 +76,21 @@ def run(grid: Grid, llm=None, max_steps=50, mode="llm") -> dict[str, Any]:
         print(f"Step {step+1:02d} | {action_name:<12} | {last_result.outcome} "
               f"| events: {last_result.events or '—'} | pos: {agent.pos}")
 
+        if renderer:
+            renderer.draw(grid, agent, step + 1, action_name,
+                          last_result.outcome, last_result.events)
+
         if grid.is_goal_reached(agent):
             metrics["success"] = True
             metrics["steps"]   = step + 1
+            if renderer:
+                renderer.draw(grid, agent, step + 1, action_name,
+                              last_result.outcome, last_result.events)
+                renderer.pause(2000)
             break
+
+    if renderer:
+        renderer.close()
 
     result: dict[str, Any] = {**metrics, "mode": mode, "log": log}
     _save(result, mode)
